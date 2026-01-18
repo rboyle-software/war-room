@@ -15,16 +15,17 @@ export default function SignIn() {
     try {
       setIsLoading(true);
       setError(null);
+      const apiBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL || '';
 
       // Start OAuth flow - this will redirect to Google
       await signIn.authenticateWithRedirect({
         strategy: 'oauth_google',
         // For web, we use a constant base URL. For native, we have a deep link.
         redirectUrl: Platform.OS === 'web'
-          ? 'http://localhost:8081/sso-callback'
+          ? apiBaseUrl + '/sso-callback'
           : 'warroom://sso-callback',
         redirectUrlComplete: Platform.OS === 'web'
-          ? 'http://localhost:8081/'
+          ? apiBaseUrl
           : 'warroom://',
       });
     } catch (err: any) {
