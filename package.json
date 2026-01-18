@@ -4,18 +4,43 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@expo/cli": "~54.0.16",
+    "@jnxplus/nx-maven": "^2.1.0",
+    "@nx/expo": "^22.3.3",
     "@nx/js": "22.3.3",
+    "@prettier/plugin-xml": "^3.4.2",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
+    "@types/node": "20.19.9",
+    "@types/react": "^19.1.0",
+    "babel-preset-expo": "~54.0.7",
+    "metro-config": "~0.83.0",
+    "metro-resolver": "~0.83.0",
     "nx": "22.3.3",
     "prettier": "~3.6.2",
+    "prettier-plugin-java": "2.5.0",
     "tslib": "^2.3.0",
     "typescript": "~5.9.2"
   },
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "apps/*",
+    "libs/*"
+  ],
+  "dependencies": {
+    "@expo/metro-config": "~54.0.9",
+    "@expo/metro-runtime": "~6.1.2",
+    "expo": "~54.0.0",
+    "expo-splash-screen": "~31.0.11",
+    "expo-status-bar": "~3.0.8",
+    "expo-system-ui": "~6.0.8",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-native": "0.81.5",
+    "react-native-svg": "15.12.1",
+    "react-native-svg-transformer": "~1.5.1",
+    "react-native-web": "~0.21.0"
+  }
 }

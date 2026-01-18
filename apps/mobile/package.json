@@ -1,0 +1,31 @@
+{
+  "name": "@war-room/mobile",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/mobile"
+  },
+  "dependencies": {
+    "@clerk/clerk-expo": "^2.19.18",
+    "@expo/metro-config": "*",
+    "@testing-library/react-native": "*",
+    "expo": "*",
+    "expo-constants": "^18.0.13",
+    "expo-linking": "^8.0.11",
+    "expo-router": "^6.0.21",
+    "expo-secure-store": "^15.0.8",
+    "expo-splash-screen": "*",
+    "expo-status-bar": "^3.0.9",
+    "expo-system-ui": "*",
+    "expo-web-browser": "^15.0.10",
+    "jest-expo": "*",
+    "metro-config": "*",
+    "metro-resolver": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "*",
+    "react-native-svg-transformer": "*",
+    "react-native-web": "*"
+  }
+}
